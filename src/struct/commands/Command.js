@@ -27,6 +27,8 @@ class Command extends AkairoModule {
             ratelimit = 1,
             argumentDefaults = {},
             description = '',
+            usage = '',
+            examples = '',
             prefix = this.prefix,
             clientPermissions = this.clientPermissions,
             userPermissions = this.userPermissions,
@@ -109,6 +111,18 @@ class Command extends AkairoModule {
          * @type {string|any}
          */
         this.description = Array.isArray(description) ? description.join('\n') : description;
+        
+        /**
+        * Usage of the command
+        * @type {string|any}
+        */
+        this.usage = usage;
+        
+        /**
+        * Examples of the command
+        * @type {string|any}
+        */
+        this.examples = Array.isArray(examples) ? examples.join('\n') : examples;
 
         /**
          * Command prefix overwrite.
