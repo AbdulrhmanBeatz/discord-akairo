@@ -96,6 +96,18 @@ class Command extends AkairoModule {
          * @type {string}
          */
         this.description = (Array.isArray(options.description) ? options.description.join('\n') : options.description) || '';
+        
+        /**
+        * Usage of the command
+        * @type {string|any}
+        */
+        this.usage = options.usage || '';
+        
+        /**
+        * Examples of the command
+        * @type {string|any}
+        */
+        this.examples = (Array.isArray(options.examples) ? options.examples.join('\n') : options.examples) || '';
 
         /**
          * Command prefix overwrite.
